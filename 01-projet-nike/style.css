@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/*Barre de navigation */
+nav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Mettre un espace entre logo et nav barre*/
+    padding: 20px;/* un espace en haut de 20px */
+    background-color: #fff;
+    position: sticky; /*pour que notre barre de nav reste coller en haut avec la position stickey et top 0 */
+    top: 0; 
+}
+nav h1{ /*logo*/
+    font-size: 20px;
+}
+nav .onglets{ /* pour mettres les éléments sur une ligne */
+    display: flex;
+    flex-wrap: wrap;
+}
+nav .onglets p{ /* pour mes a de mon menu*/
+    font-size: 17px;
+    text-decoration: none;
+    margin-right: 10px; /* espacer les liens */
+    cursor: pointer;
+    color: black;
+}
+nav input{
+    margin: 8px 20px;
+    padding: 15px;
+    border-radius: 30px; /* arrondir les bordes*/
+    border: none; /*pour enlever la bordure*/
+    outline: none; /* enlever la bordure initiale*/
+    background-color: #f2f2f2;
+}
+/* Fin barre de navigation */
+
+/*Header*/
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;  /* pour mettre nos éléments en colonne*/
+}
+header h2{
+    font-size: 80px;
+}
+header button{
+    padding: 20px 25px;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+}
+/*Fin Header*/
+
+/*Section principale*/
+.main{
+    margin: 20px; /*Sur tout les cotés */
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/*toutes les cartes*/
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+}
+.cards .card{
+    margin-right: 20px;
+    cursor: pointer;
+}
+.cards .card img{
+    width: 350px;
+} 
+.cards .card .card-bottom{
+    display: flex; /*aligner le nom de l'article avec le prix*/
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.cards .card .body-bottom p{
+    margin-top: -10px;
+}
+/*Fin des cartes */
+/*Video */
+.main .video{
+    margin-top: 80px;
+    width: 90%;
+}
+.main .video iframe{
+    border-radius: 10px;
+    width: 100%;
+    height: 400px;
+}
+/*Fin Video */
+/*Fin Section principale*/
+/*Footer*/
+footer{
+    margin-top: 100px;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 30px;
+}
+footer .social{
+    display: flex;
+}
+footer .social p {
+    margin-right: 20px;
+    border: 1px solid #fff;
+    border-radius: 100%;
+    padding: 5px ;
+    text-align: center;
+    width: 20px;
+    cursor: pointer;
+}
+/*Fin footer*/
+
+@media screen and (max-width: 640px){ /*ça veut dire à partir de 600 px et en dessous  */
+    nav .onglets .link, nav h1 /*notre classe link de notre navbar */{
+        display: none;
+    }
+}
